@@ -1,0 +1,12 @@
+.date-list {
+    width: 760px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.date-list li {
+    margin: 10px auto;
+}
