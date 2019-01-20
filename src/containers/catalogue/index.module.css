@@ -1,12 +1,8 @@
 .date-list {
     width: 760px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
 }
 
-
-.date-list li {
-    margin: 10px auto;
-}
