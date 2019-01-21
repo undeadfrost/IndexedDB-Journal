@@ -42,11 +42,11 @@ class Catalogue extends Component<Props, State> {
       </Link>
     </li>));
 
-  getMonthDay = (dayNum: number) => {
+  getMonthDay = (year: string, month: string, dayNum: number) => {
     let dayNodes: any = [];
     for (let i: number = 1; i <= dayNum; i++) {
       dayNodes.push(<li key={i}>
-        <Link to={`${i}`}><Card left={`${i}日`} right={6}/></Link>
+        <Link to={`/${year}/${month}/${i}`}><Card left={`${i}日`} right={6}/></Link>
       </li>)
     }
     return dayNodes;
@@ -63,7 +63,7 @@ class Catalogue extends Component<Props, State> {
       <Layout>
         {month ? <h1>{year} / {month}</h1> : <h1>{year}</h1>}
         <ul className={styles["date-list"]}>
-          {month ? this.getMonthDay(dayNum) : this.getYearMonth(year)}
+          {month ? this.getMonthDay(year, month, dayNum) : this.getYearMonth(year)}
         </ul>
       </Layout>
     )
